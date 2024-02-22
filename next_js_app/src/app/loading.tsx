@@ -1,9 +1,5 @@
 const loading = () => {
-    return (
-        <div>
-            Loading
-        </div>
-    );
-}
+  return <div className="flex gap-4">Piko</div>;
+};
 
 export default loading;

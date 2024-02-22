@@ -70,6 +70,13 @@ button:hover {
     background-color: var(--btnHover);
 }
 
+loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 @media (max-width: 60rem) {
   .container {
     width: 100%;

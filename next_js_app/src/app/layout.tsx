@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
+import { Spinner } from "@nextui-org/spinner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,10 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-      </head>
+    <html lang="en" className="dark">
       <body className={inter.className}>
         <div className="container">
           <Navbar />
