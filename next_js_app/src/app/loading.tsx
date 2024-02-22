@@ -1,5 +1,7 @@
+import { DotLoader } from "react-spinners";
+
 const loading = () => {
-  return <div className="flex gap-4">Piko</div>;
+  return <></>;
 };
 
 export default loading;
