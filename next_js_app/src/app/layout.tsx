@@ -1,15 +1,31 @@
+"use client";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
+import React, { useEffect, useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
-
+/*
 export const metadata: Metadata = {
   title: "Fashion Store",
   description:
     "A simple fashion store for everyone who loves fashion and style.",
+};*/
+
+const Dynamic = ({ children }: { children: React.ReactNode }) => {
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  if (!hasMounted) {
+    return null;
+  }
+
+  return <>{children}</>;
 };
 
 export default function RootLayout({
@@ -22,7 +38,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="container">
           <Navbar />
-          {children}
+          <Dynamic>{children}</Dynamic>
         </div>
         <Footer />
       </body>
