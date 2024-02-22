@@ -8,6 +8,7 @@ const Page = () => {
           Welcome to our fashion store! We offer a wide range of trendy
           clothing, shoes, and accessories for men and women. Our mission is to
           provide high-quality products that make you look and feel confident.
+          test
         </p>
         <div>
           <p>
