@@ -18,7 +18,7 @@ const ProductItem = ({ item }: ProductProps) => {
         className={styles.itemPhoto}
       />
       <div className={styles.buttons}>
-        <Link href={`/store/${item.id}`}>
+        <Link href={`/store/products/${item.id}`}>
           <button>Read more..</button>
         </Link>
         <button>Add to cart for {item.price}€</button>

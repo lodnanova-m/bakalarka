@@ -5,6 +5,7 @@ import { Product } from "@/models/models";
 async function getProducts() {
   const response = await fetch(`${process.env.URL}/api/products`, {
     method: "GET",
+    next: { revalidate: 10 },
   });
   return response.json() as Promise<{ products: Product[] }>;
 }
