@@ -23,7 +23,7 @@ const Home = () => {
             <button>Shop now</button>
           </Link>
           <Link href={"/about"}>
-            <button>Learn more</button>
+            <button>Learn more about our company</button>
           </Link>
         </div>
       </div>
