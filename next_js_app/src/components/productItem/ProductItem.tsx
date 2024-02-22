@@ -1,4 +1,4 @@
-import { Product } from "@/app/models/models";
+import { Product } from "@/models/models";
 import Image from "next/image";
 import styles from "./productItem.module.css";
 import Link from "next/link";

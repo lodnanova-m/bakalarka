@@ -1,15 +1,19 @@
-import ProductItem from "@/components/productItem/ProductItem";
 import styles from "./store.module.css";
-import { Products } from "../models/models";
-const Store = () => {
+import ProductList from "@/components/ProductList/ProductList";
+import { Product } from "@/models/models";
+
+async function getProducts() {
+  const response = await fetch(`${process.env.URL}/api/products`, {
+    method: "GET",
+  });
+  return response.json() as Promise<{ products: Product[] }>;
+}
+
+export default async function Store() {
+  const response = await getProducts();
   return (
     <div className={styles.container}>
-      <ProductItem item={Products[0]} />
-      <ProductItem item={Products[1]} />
-      <ProductItem item={Products[2]} />
-      <ProductItem item={Products[3]} />
+      <ProductList items={response.products}></ProductList>
     </div>
   );
-};
-
-export default Store;
+}

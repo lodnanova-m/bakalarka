@@ -1,6 +1,8 @@
 import Image from "next/image";
 import styles from "./home.module.css";
 import Link from "next/link";
+import homePic from "../../assets/home_image.jpg";
+
 const Home = () => {
   return (
     <div className={styles.container}>
@@ -8,8 +10,8 @@ const Home = () => {
         <h1>Unleash Your Fashion Beast</h1>
         <h2>Roar with confidence and style</h2>
         <p>
-          Welcome to FashionBeast, where style meets comfort and fashion becomes
-          accessible to everyone.
+          Welcome to Fashion Beast, where style meets comfort and fashion
+          becomes accessible to everyone.
         </p>
         <div className={styles.cardButtons}>
           <Link href={"/store"}>
@@ -20,13 +22,7 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <Image
-        src="/home_image.jpg"
-        alt="home page image"
-        width={500}
-        height={700}
-        className={styles.imageHome}
-      />
+      <Image src={homePic} alt="home page image" className={styles.imageHome} />
     </div>
   );
 };

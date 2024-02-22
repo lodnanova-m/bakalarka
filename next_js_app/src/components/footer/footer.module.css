@@ -14,6 +14,12 @@
     flex-direction: column;
     align-items: end;
 }
+.logotype{
+    display: block;
+    max-height: 3rem;
+    width: auto;
+    height: auto;
+}
 
 @media (max-width: 55rem) {
     .container

@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Link as LinkT } from "@/app/models/models";
+import { Link as LinkT } from "@/models/models";
 import { usePathname } from "next/navigation";
 import styles from "./navLink.module.css";
 type NavLinkProps = {

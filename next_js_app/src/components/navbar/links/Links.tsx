@@ -2,7 +2,7 @@
 import { useState } from "react";
 import styles from "./links.module.css";
 import NavLink from "./navLink/navLink";
-import { Links as LinksList } from "@/app/models/models";
+import { Links as LinksList } from "@/models/models";
 import Image from "next/image";
 
 const Links = () => {

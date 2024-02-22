@@ -2,5 +2,32 @@
 {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 2rem;
 }
+.logo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.icon
+{
+    display: block;
+    max-height:4rem;
+    width: auto;
+    height: auto;
+    margin-left: 1rem;
+}
+.logotype{
+    display: block;
+    max-height: 2.5rem;
+    margin-left: 1rem;
+    width: auto;
+    height: auto;
+}
+@media (max-width: 60rem) {
+    .logotype{
+        display: none;
+    }
+  }

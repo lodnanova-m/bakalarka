@@ -4,13 +4,14 @@
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+    margin: 5rem 0;
 }
 .homeCard {
     background-color: var(--bgSoft);
     padding: 2rem 3rem ;
     border-radius: 1rem;
-    max-width: 25rem;
-    max-height: 35rem;
+    max-width: 40rem;
+    max-height: 60rem;
 }
 .cardButtons
 {
@@ -20,7 +21,11 @@
     justify-content: center;
 }
 .imageHome{
-    margin: 1rem;
+    display: block;
+    max-width:50rem;
+    max-height:60rem;
+    width: auto;
+    height: auto;
     border-radius: 1rem;
 }
 
