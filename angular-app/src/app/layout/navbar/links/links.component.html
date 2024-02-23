@@ -1,0 +1,19 @@
+<div>
+    <div class="links">
+        <a routerLink="/" routerLinkActive="active" class="linkButton">Home</a>
+        <a routerLink="/about" routerLinkActive="active" class="linkButton">About</a>
+        <a routerLink="/store" routerLinkActive="active" class="linkButton">Store</a>
+        <a routerLink="/contact" routerLinkActive="active" class="linkButton">Contact</a>
+    </div>
+    <button class="menuButton" (click)="toggleOpen()">
+      <img src="/assets/images/menu_hamburger.svg" alt="hamburger menu icon" width="30" height="30">
+    </button>
+    @if (open) {
+        <div class="mobileLinks">
+            <a routerLink="/" routerLinkActive="active" class="linkButton">Home</a>
+            <a routerLink="/about" routerLinkActive="active" class="linkButton">About</a>
+            <a routerLink="/store" routerLinkActive="active" class="linkButton">Store</a>
+            <a routerLink="/contact" routerLinkActive="active" class="linkButton">Contact</a>
+        </div>
+    }
+</div>

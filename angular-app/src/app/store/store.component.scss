@@ -1,0 +1,38 @@
+.storeContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 2rem 0;
+}
+.productCard{
+    background-color: var(--bgSoft);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    max-width: 50%;
+}
+.itemPhoto
+{
+    object-fit: cover;
+    border-radius: 1rem;
+}
+.buttons
+{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+@media (max-width: 60rem) {
+    .buttons
+    {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-direction: column;
+    }
+}

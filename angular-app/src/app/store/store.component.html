@@ -1,1 +1,16 @@
-<p>store works!</p>
+<div class="storeContainer">
+  <div *ngFor="let item of products; let i = index" class="productCard">
+    <h1>{{ item.name }}</h1>
+    <img
+      src="{{ item.image }}"
+      alt="{{ item.name }}"
+      width="300"
+      height="400"
+      class="itemPhoto"
+    />
+    <div class="buttons">
+      <a [routerLink]="['/store', item.id]"><button>Read more..</button></a>
+      <button>Add to cart for {{ item.price }}€</button>
+    </div>
+  </div>
+</div>
