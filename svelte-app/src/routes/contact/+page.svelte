@@ -19,7 +19,8 @@
 </div>
 
 <svelte:head>
-    <title>Contact</title>
+	<title>Contact</title>
+	<meta name="description" content="Contact form" />
 </svelte:head>
 
 <style>

@@ -4,7 +4,9 @@
 
 <svelte:head>
 	<title>Fashion Beast</title>
+	<meta name="description" content="Landing page of Fashion Beast store" />
 </svelte:head>
+
 <div class="home">
 	<div class="homeCard">
 		<h1>Unleash Your Fashion Beast</h1>

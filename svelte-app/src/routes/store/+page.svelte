@@ -24,6 +24,7 @@
 
 <svelte:head>
 	<title>Store</title>
+	<meta name="description" content="Store including all products" />
 </svelte:head>
 
 <style>

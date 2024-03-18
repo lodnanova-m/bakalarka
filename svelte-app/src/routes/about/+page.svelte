@@ -23,7 +23,8 @@
 	</div>
 </div>
 <svelte:head>
-	<title>About</title>
+	<title>About | Fashion Beast</title>
+	<meta name="description" content="About Fashion Beast company" />
 </svelte:head>
 
 <style>
