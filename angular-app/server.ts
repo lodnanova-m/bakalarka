@@ -11,7 +11,7 @@ export function app(): express.Express {
   const serverDistFolder = dirname(fileURLToPath(import.meta.url));
   const browserDistFolder = resolve(serverDistFolder, '../browser');
   const indexHtml = join(serverDistFolder, 'index.server.html');
-
+  const fs = require("fs");
   const commonEngine = new CommonEngine();
 
   server.set('view engine', 'html');
@@ -25,19 +25,22 @@ export function app(): express.Express {
   }));
 
   // All regular routes use the Angular engine
-  server.get('*', (req, res, next) => {
-    const { protocol, originalUrl, baseUrl, headers } = req;
+  server.get("/products", (req, res) => {
 
-    commonEngine
-      .render({
-        bootstrap,
-        documentFilePath: indexHtml,
-        url: `${protocol}://${headers.host}${originalUrl}`,
-        publicPath: browserDistFolder,
-        providers: [{ provide: APP_BASE_HREF, useValue: baseUrl }],
-      })
-      .then((html) => res.send(html))
-      .catch((err) => next(err));
+    fs.readFile("db.json", "utf8", (err:any , data:any) => {
+      if (err) {
+        console.log(err);
+        res.status(500).send("Internal Server Error");
+        return;
+      }
+  
+      const jsonData = JSON.parse(data);
+  
+      res.status(200).json({
+        items: jsonData.products,
+        total: jsonData.products.length,
+      });
+    });
   });
 
   return server;
