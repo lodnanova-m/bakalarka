@@ -22,6 +22,9 @@
 		<p>Visit our store today and discover your unique style with Fashion Store!</p>
 	</div>
 </div>
+<svelte:head>
+	<title>About</title>
+</svelte:head>
 
 <style>
 	.about {
@@ -30,7 +33,7 @@
 		align-items: center;
 		gap: 2rem;
 		margin-top: 5rem;
-        min-height: 80vh;
+		min-height: 80vh;
 	}
 	.card {
 		background-color: var(--bgSoft);

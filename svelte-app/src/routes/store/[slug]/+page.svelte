@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { Product } from './+page.server';
 	export let data: Product;
-	console.log(data);
 </script>
 
 <div class="productContainer">
@@ -14,6 +13,11 @@
 		<button class="button">Add to cart for {data.price}€</button>
 	</div>
 </div>
+
+<svelte:head>
+	<title>{data.name}</title>
+    <meta name="description" content="{data.name} is a name of a current product">
+</svelte:head>
 
 <style>
 	.productContainer {

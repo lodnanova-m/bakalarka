@@ -22,6 +22,10 @@
 	{/each}
 </div>
 
+<svelte:head>
+	<title>Store</title>
+</svelte:head>
+
 <style>
 	.storeContainer {
 		display: flex;

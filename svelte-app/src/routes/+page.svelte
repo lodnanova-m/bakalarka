@@ -2,6 +2,9 @@
 	import home from '../assets/home_image.jpg';
 </script>
 
+<svelte:head>
+	<title>Fashion Beast</title>
+</svelte:head>
 <div class="home">
 	<div class="homeCard">
 		<h1>Unleash Your Fashion Beast</h1>
