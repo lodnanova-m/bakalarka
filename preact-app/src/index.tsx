@@ -25,7 +25,7 @@ export function App() {
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
           <Route path="/store" component={Store} />
-          <Route path="/store/[id]" component={StoreItem} />
+          <Route path="/store/:id" component={StoreItem} />
           <Route default component={NotFound} />
         </Router>
       </main>
