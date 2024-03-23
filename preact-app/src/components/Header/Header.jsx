@@ -14,16 +14,19 @@ export function Header() {
         </a>
         <div>
           <div class="links">
-            <a href="/" class={url === '/' ? "active" : "linkButton"}>
+            <a href="/" class={url === "/" ? "active" : "linkButton"}>
               Home
             </a>
-            <a href="/about" class={url === '/about' ? "active" : "linkButton"}>
+            <a href="/about" class={url === "/about" ? "active" : "linkButton"}>
               About
             </a>
-            <a href="/store" class={url === '/store' ? "active" : "linkButton"}>
+            <a href="/store" class={url === "/store" ? "active" : "linkButton"}>
               Store
             </a>
-            <a href="/contact" class={url === '/contact' ? "active" : "linkButton"}>
+            <a
+              href="/contact"
+              class={url === "/contact" ? "active" : "linkButton"}
+            >
               Contact
             </a>
           </div>

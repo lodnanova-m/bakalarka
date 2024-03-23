@@ -14,6 +14,7 @@ import { Header } from "./components/Header/Header.jsx";
 import { Contact } from "./pages/Contact/index.js";
 import { Store } from "./pages/Store/index.js";
 import { StoreItem } from "./pages/StoreItem/index.js";
+import { Footer } from "./components/Footer/Footer.jsx";
 
 export function App() {
   return (
@@ -29,6 +30,7 @@ export function App() {
           <Route default component={NotFound} />
         </Router>
       </main>
+      <Footer />
     </LocationProvider>
   );
 }

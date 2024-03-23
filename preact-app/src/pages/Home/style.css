@@ -4,7 +4,8 @@
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
-    margin: 5rem;
+    margin: 0rem 5rem 5rem;
+    height: 80vh;
 }
 .homeCard {
     background-color: var(--bgSoft);
