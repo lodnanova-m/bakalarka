@@ -38,11 +38,14 @@
     border-radius: 20px;
     font-weight: 500;
     text-align: center;
+    background-color: var(--btnHover);
 }
 .active {
-    background-color: white;
+    background-color: rgb(159, 155, 166);
     color: black;
     text-align: center;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
 }
 .mobileLinks {
     display: none;

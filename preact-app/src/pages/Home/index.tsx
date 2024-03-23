@@ -1,39 +1,41 @@
-import preactLogo from '../../assets/preact.svg';
-import './style.css';
-
+import "./style.css";
+import homeImage from "../../assets/home_image.jpg";
+import { Button } from "../../components/Button/Button";
 export function Home() {
-	return (
-		<div class="home">
-			<a href="https://preactjs.com" target="_blank">
-				<img src={preactLogo} alt="Preact logo" height="160" width="160" />
-			</a>
-			<h1>Get Started building Vite-powered Preact Apps </h1>
-			<section>
-				<Resource
-					title="Learn Preact"
-					description="If you're new to Preact, try the interactive tutorial to learn important concepts"
-					href="https://preactjs.com/tutorial"
-				/>
-				<Resource
-					title="Differences to React"
-					description="If you're coming from React, you may want to check out our docs to see where Preact differs"
-					href="https://preactjs.com/guide/v10/differences-to-react"
-				/>
-				<Resource
-					title="Learn Vite"
-					description="To learn more about Vite and how you can customize it to fit your needs, take a look at their excellent documentation"
-					href="https://vitejs.dev"
-				/>
-			</section>
-		</div>
-	);
+  return (
+    <div class="home">
+      <div class="homeCard">
+        <h1>Unleash Your Fashion Beast</h1>
+        <h2>Roar with confidence and style</h2>
+        <p>
+          Welcome to Fashion Beast, the ultimate destination where style meets
+          comfort and fashion becomes accessible to everyone. At Fashion Beast,
+          we believe that fashion is not just about wearing clothes but
+          expressing your unique identity and feeling confident in your own
+          skin. Our carefully curated collections are designed to cater to
+          diverse tastes and occasions, ensuring that you find the perfect piece
+          that speaks to you.
+        </p>
+        <div class="cardButtons">
+          <Button label={"Shop now"} path={"/store"}></Button>
+          <Button
+            label={"Learn more about our company"}
+            path={"/about"}
+          ></Button>
+        </div>
+      </div>
+      <img src={homeImage} alt="home page image" class="imageHome" />
+    </div>
+  );
 }
 
+export default Home;
+
 function Resource(props) {
-	return (
-		<a href={props.href} target="_blank" class="resource">
-			<h2>{props.title}</h2>
-			<p>{props.description}</p>
-		</a>
-	);
+  return (
+    <a href={props.href} target="_blank" class="resource">
+      <h2>{props.title}</h2>
+      <p>{props.description}</p>
+    </a>
+  );
 }

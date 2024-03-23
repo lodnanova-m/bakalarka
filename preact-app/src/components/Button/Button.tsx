@@ -1,4 +1,9 @@
+import { Link } from "preact-router";
 import "./style.css";
 export function Button({ label, path }) {
-  return <a href={path}>{label}</a>;
+  return (
+    <Link href={path}>
+      <button>{label}</button>
+    </Link>
+  );
 }

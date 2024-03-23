@@ -5,7 +5,6 @@ import icon from "../../assets/images/menu_hamburger.svg";
 import "./style.css";
 export function Header() {
   const { url } = useLocation();
-  console.log(url);
   return (
     <header>
       <nav class="navbarContainer">
@@ -15,16 +14,16 @@ export function Header() {
         </a>
         <div>
           <div class="links">
-            <a href="/" class={url == '/' ? "active" : "linkButton"}>
+            <a href="/" class={url === '/' ? "active" : "linkButton"}>
               Home
             </a>
-            <a href="/about" class={url == '/about' ? "active" : "linkButton"}>
+            <a href="/about" class={url === '/about' ? "active" : "linkButton"}>
               About
             </a>
-            <a href="/store" class="active">
+            <a href="/store" class={url === '/store' ? "active" : "linkButton"}>
               Store
             </a>
-            <a href="/contact" class="linkButton">
+            <a href="/contact" class={url === '/contact' ? "active" : "linkButton"}>
               Contact
             </a>
           </div>
@@ -47,7 +46,6 @@ export function Header() {
           </button>
         </div>
       </nav>
-      ;
     </header>
   );
 }
