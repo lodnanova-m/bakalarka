@@ -38,6 +38,6 @@
     "removeComments": true
   },
   "include": [
-    "./src/**/*"
+    "./src/ts/**/*"
   ]
 }

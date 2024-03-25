@@ -13,11 +13,15 @@
 
 
 (function () {
-  requirejs.config(
+    // The "oj_whenReady" global variable enables a strategy that the busy context whenReady,
+    // will implicitly add a busy state, until the application calls applicationBootstrapComplete
+    // on the busy state context.
+    window["oj_whenReady"] = true;
+
+    requirejs.config(
     {
-      // injector:baseUrl
-      baseUrl: '.',
-      // endinjector
+      baseUrl: 'js',
+
       paths:
       /* DO NOT MODIFY
       ** All paths are dynamicaly generated from the path_mappings.json file.
@@ -56,4 +60,4 @@
 /**
  * Load the application's entry point file
  */
-require(['./index']);
+require(['./root']);
