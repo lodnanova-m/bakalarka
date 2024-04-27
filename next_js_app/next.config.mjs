@@ -8,6 +8,12 @@ const nextConfig = {
         port: "3000",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "master.d3d95ljo92pafp.amplifyapp.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };
