@@ -3,16 +3,16 @@ import styles from "./singleStoreItem.module.css";
 import { Product } from "@/models/models";
 
 async function getProductById(productId: string) {
-  const response = await fetch(`${process.env.URL}/api/products/${productId}`, {
+  const response = await fetch(`${process.env.URL}/products/${productId}`, {
     method: "GET",
     next: { revalidate: 10 },
   });
-  return response.json() as Promise<{ product: Product }>;
+  return response.json() as Promise<{ item: Product }>;
 }
 
 export default async function StorePage({ params }: any) {
   const response = await getProductById(params.id);
-  const product = response.product;
+  const product = response.item;
 
   return (
     <div className={styles.container}>

@@ -3,14 +3,14 @@ import ProductList from "@/components/ProductList/ProductList";
 import { Product } from "@/models/models";
 
 async function getProducts() {
-  const response = await fetch(`${process.env.URL}/api/products`, {
-    method: "GET",
+  console.log(process.env.URL);
+  const response = await fetch(`${process.env.URL}/products`, {
     next: { revalidate: 10 },
   });
   if (response.status !== 200) {
     return null;
   }
-  return response.json() as Promise<{ products: Product[] }>;
+  return response.json() as Promise<{ items: Product[] }>;
 }
 
 export default async function Store() {
@@ -20,7 +20,7 @@ export default async function Store() {
   }
   return (
     <div className={styles.container}>
-      <ProductList items={response.products}></ProductList>
+      <ProductList items={response.items}></ProductList>
     </div>
   );
 }
