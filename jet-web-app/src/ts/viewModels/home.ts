@@ -6,8 +6,6 @@
  * @ignore
  */
 import * as AccUtils from "../accUtils";
-import * as ko from "knockout";
-import MutableArrayDataProvider = require("ojs/ojmutablearraydataprovider");
 import "ojs/ojselectsingle";
 import "ojs/ojlabel";
 import "ojs/ojchart";
@@ -15,54 +13,9 @@ import "ojs/ojlistview";
 import "ojs/ojknockout";
 import "ojs/ojcomponentcore";
 import "ojs/ojbutton";
-import * as storeData from "text!../store_data.json";
-type ChartType = {
-  value: string;
-  label: string;
-};
-
-type Activity = {
-  id: number;
-};
 
 class HomeViewModel {
-  val: ko.Observable<string>;
-  chartTypes: Array<Object>;
-  chartTypesDP: MutableArrayDataProvider<ChartType["value"], ChartType>;
-  chartDataProvider: MutableArrayDataProvider<string, {}>;
-  chartData: Array<object>;
-  activityDataProvider: MutableArrayDataProvider<Activity["id"], Activity>;
-
-  constructor() {
-    this.val = ko.observable("pie");
-    this.chartTypes = [
-      { value: "pie", label: "Pie" },
-      { value: "bar", label: "Bar" },
-    ];
-    this.chartTypesDP = new MutableArrayDataProvider<
-      ChartType["value"],
-      ChartType
-    >(this.chartTypes, { keyAttributes: "value" });
-    this.chartData = [
-      { id: 0, series: "Baseball", group: "Group A", value: 42 },
-      { id: 1, series: "Baseball", group: "Group B", value: 34 },
-      { id: 2, series: "Bicycling", group: "Group A", value: 55 },
-      { id: 3, series: "Bicycling", group: "Group B", value: 30 },
-      { id: 4, series: "Skiing", group: "Group A", value: 36 },
-      { id: 5, series: "Skiing", group: "Group B", value: 50 },
-      { id: 6, series: "Soccer", group: "Group A", value: 22 },
-      { id: 7, series: "Soccer", group: "Group B", value: 46 },
-    ];
-    this.chartDataProvider = new MutableArrayDataProvider(this.chartData, {
-      keyAttributes: "id",
-    });
-    this.activityDataProvider = new MutableArrayDataProvider<
-      Activity["id"],
-      Activity
-    >(JSON.parse(storeData), {
-      keyAttributes: "id",
-    });
-  }
+  constructor() {}
 
   /**
    * Optional ViewModel method invoked after the View is inserted into the
