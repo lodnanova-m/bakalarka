@@ -13,11 +13,11 @@ async function getProductById(productId: string) {
 export default async function StorePage({ params }: any) {
   const response = await getProductById(params.id);
   const product = response.product;
-  console.log(process.env.URL);
+
   return (
     <div className={styles.container}>
       <Image
-        src={`${process.env.REACT_APP_URL}/${product.image}`}
+        src={`${process.env.URL}/${product.image}`}
         alt={product.name}
         width={300}
         height={300}
