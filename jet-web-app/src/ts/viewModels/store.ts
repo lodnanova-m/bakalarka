@@ -6,8 +6,48 @@
  * @ignore
  */
 import * as AccUtils from "../accUtils";
+import * as ko from "knockout";
+import "ojs/ojknockout";
+import "ojs/ojactioncard";
+import { ActionCardElement } from "ojs/ojactioncard";
+import "ojs/ojlabel";
+
+type Product = {
+  id: string;
+  name: string;
+  price: number;
+  description: string;
+  image: string;
+};
+
 class StoreViewModel {
-  constructor() {}
+  keyAttributes = "id";
+  restServerURLProducts: string = "http://localhost:3000/products";
+  products = ko.observableArray([]);
+  readonly logMsg = ko.observable("none");
+
+  readonly actionHandler = (event: ActionCardElement.ojAction) => {
+    this.logMsg(
+      "Action handler invoked - " + (event.currentTarget as HTMLElement).id
+    );
+  };
+
+  constructor() {
+    this.fetchProducts();
+  }
+
+  async fetchProducts() {
+    try {
+      let response = await fetch(this.restServerURLProducts);
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      let data = await response.json();
+      this.products(data.items || []); // Adjust depending on the actual data structure
+    } catch (error) {
+      console.error("Failed to fetch products:", error);
+    }
+  }
 
   /**
    * Optional ViewModel method invoked after the View is inserted into the
@@ -20,9 +60,11 @@ class StoreViewModel {
   connected(): void {
     AccUtils.announce("Store page loaded.");
     document.title = "Store";
-    // implement further logic if needed
   }
-
+  navigateToItem(itemId: any) {
+    // Implement navigation logic using oj.Router
+    // e.g., oj.Router.rootInstance.go('/store/' + itemId);
+  }
   /**
    * Optional ViewModel method invoked after the View is disconnected from the DOM.
    */

@@ -4,8 +4,20 @@
  as shown at https://oss.oracle.com/licenses/upl/
  -->
 <div class="oj-hybrid-padding">
-  <h1>About Content Area</h1>
+  <h1>Store</h1>
   <div>
-      To change the content of this section, you will make edits to the about.html file located in the /ts/views folder.
+    <div data-bind="foreach: products">
+      <oj-action-card id="Default" class="oj-sm-margin-2x demo-card-content">
+        <div class="product-item">
+          <h3 data-bind="text: name"></h3>
+          <p data-bind="text: description"></p>
+          <img
+            data-bind="attr: {src: 'http://localhost:3000/' + image, alt: name}"
+            style="width: 100px"
+          />
+          <span data-bind="text: `Price: €${price.toFixed(2)}`"></span>
+        </div>
+      </oj-action-card>
+    </div>
   </div>
 </div>

@@ -21,7 +21,7 @@
 }
 
 .demo-oracle-icon:before {
-  content: url("images/oracle_logo.svg");
+  content: url("images/logotype.png");
 }
 
 html:not([dir="rtl"]) .demo-oracle-icon {
@@ -34,6 +34,12 @@ html[dir="rtl"] .demo-oracle-icon {
 
 .demo-oracle-icon:before {
   display: inline;
+}
+
+.demo-card-content {
+  width: 30rem;
+  height: 40rem;
+  padding: 2rem;
 }
 
 .demo-appheader-avatar {
