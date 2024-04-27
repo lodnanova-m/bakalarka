@@ -9,7 +9,7 @@ import * as ko from "knockout";
 import * as ModuleUtils from "ojs/ojmodule-element-utils";
 import * as ResponsiveUtils from "ojs/ojresponsiveutils";
 import * as ResponsiveKnockoutUtils from "ojs/ojresponsiveknockoututils";
-import CoreRouter = require ("ojs/ojcorerouter");
+import CoreRouter = require("ojs/ojcorerouter");
 import ModuleRouterAdapter = require("ojs/ojmodulerouter-adapter");
 import KnockoutRouterAdapter = require("ojs/ojknockoutrouteradapter");
 import UrlParamAdapter = require("ojs/ojurlparamadapter");
@@ -24,17 +24,20 @@ import "ojs/ojdrawerpopup";
 interface CoreRouterDetail {
   label: string;
   iconClass: string;
-};
+}
 
 class RootViewModel {
   manner: ko.Observable<string>;
-  message: ko.Observable<string|undefined>;
-  smScreen: ko.Observable<boolean>|undefined;
-  mdScreen: ko.Observable<boolean>|undefined;
-  router: CoreRouter<CoreRouterDetail>|undefined;
+  message: ko.Observable<string | undefined>;
+  smScreen: ko.Observable<boolean> | undefined;
+  mdScreen: ko.Observable<boolean> | undefined;
+  router: CoreRouter<CoreRouterDetail> | undefined;
   moduleAdapter: ModuleRouterAdapter<CoreRouterDetail>;
   sideDrawerOn: ko.Observable<boolean>;
-  navDataProvider: ojNavigationList<string, CoreRouter.CoreRouterState<CoreRouterDetail>>["data"];
+  navDataProvider: ojNavigationList<
+    string,
+    CoreRouter.CoreRouterState<CoreRouterDetail>
+  >["data"];
   appName: ko.Observable<string>;
   userLogin: ko.Observable<string>;
   footerLinks: Array<object>;
@@ -45,30 +48,50 @@ class RootViewModel {
     this.manner = ko.observable("polite");
     this.message = ko.observable();
 
-    let globalBodyElement: HTMLElement = document.getElementById("globalBody") as HTMLElement;
-    globalBodyElement.addEventListener("announce", this.announcementHandler, false);
+    let globalBodyElement: HTMLElement = document.getElementById(
+      "globalBody"
+    ) as HTMLElement;
+    globalBodyElement.addEventListener(
+      "announce",
+      this.announcementHandler,
+      false
+    );
 
     // media queries for responsive layouts
     let smQuery: string | null = ResponsiveUtils.getFrameworkQuery("sm-only");
-    if (smQuery){
-      this.smScreen = ResponsiveKnockoutUtils.createMediaQueryObservable(smQuery);
+    if (smQuery) {
+      this.smScreen =
+        ResponsiveKnockoutUtils.createMediaQueryObservable(smQuery);
     }
 
     let mdQuery: string | null = ResponsiveUtils.getFrameworkQuery("md-up");
-    if (mdQuery){
-      this.mdScreen = ResponsiveKnockoutUtils.createMediaQueryObservable(mdQuery);
+    if (mdQuery) {
+      this.mdScreen =
+        ResponsiveKnockoutUtils.createMediaQueryObservable(mdQuery);
     }
 
     const navData = [
-      { path: "", redirect: "dashboard" },
-      { path: "dashboard", detail: { label: "Dashboard", iconClass: "oj-ux-ico-bar-chart" } },
-      { path: "incidents", detail: { label: "Incidents", iconClass: "oj-ux-ico-fire" } },
-      { path: "customers", detail: { label: "Customers", iconClass: "oj-ux-ico-contact-group" } },
-      { path: "about", detail: { label: "About", iconClass: "oj-ux-ico-information-s" } }
+      { path: "", redirect: "home" },
+      {
+        path: "home",
+        detail: { label: "Home", iconClass: "oj-ux-ico-home" },
+      },
+      {
+        path: "about",
+        detail: { label: "About", iconClass: "oj-ux-ico-information-s" },
+      },
+      {
+        path: "contact",
+        detail: { label: "Contact", iconClass: "oj-ux-ico-contact-group" },
+      },
+      {
+        path: "store",
+        detail: { label: "Store", iconClass: "oj-ux-ico-store" },
+      },
     ];
     // router setup
     const router = new CoreRouter(navData, {
-      urlAdapter: new UrlParamAdapter()
+      urlAdapter: new UrlParamAdapter(),
     });
     router.sync();
 
@@ -78,7 +101,9 @@ class RootViewModel {
 
     // Setup the navDataProvider with the routes, excluding the first redirected
     // route.
-    this.navDataProvider = new ArrayDataProvider(navData.slice(1), {keyAttributes: "path"});
+    this.navDataProvider = new ArrayDataProvider(navData.slice(1), {
+      keyAttributes: "path",
+    });
 
     // drawer
     this.sideDrawerOn = ko.observable(false);
@@ -91,36 +116,58 @@ class RootViewModel {
     // header
 
     // application Name used in Branding Area
-    this.appName = ko.observable("App Name");
+    this.appName = ko.observable("Fashion Store");
     // user Info used in Global Navigation area
 
     this.userLogin = ko.observable("john.hancock@oracle.com");
     // footer
     this.footerLinks = [
-      {name: 'About Oracle', linkId: 'aboutOracle', linkTarget:'http://www.oracle.com/us/corporate/index.html#menu-about'},
-      { name: "Contact Us", id: "contactUs", linkTarget: "http://www.oracle.com/us/corporate/contact/index.html" },
-      { name: "Legal Notices", id: "legalNotices", linkTarget: "http://www.oracle.com/us/legal/index.html" },
-      { name: "Terms Of Use", id: "termsOfUse", linkTarget: "http://www.oracle.com/us/legal/terms/index.html" },
-      { name: "Your Privacy Rights", id: "yourPrivacyRights", linkTarget: "http://www.oracle.com/us/legal/privacy/index.html" },
+      {
+        name: "About Oracle",
+        linkId: "aboutOracle",
+        linkTarget: "http://www.oracle.com/us/corporate/index.html#menu-about",
+      },
+      {
+        name: "Contact Us",
+        id: "contactUs",
+        linkTarget: "http://www.oracle.com/us/corporate/contact/index.html",
+      },
+      {
+        name: "Legal Notices",
+        id: "legalNotices",
+        linkTarget: "http://www.oracle.com/us/legal/index.html",
+      },
+      {
+        name: "Terms Of Use",
+        id: "termsOfUse",
+        linkTarget: "http://www.oracle.com/us/legal/terms/index.html",
+      },
+      {
+        name: "Your Privacy Rights",
+        id: "yourPrivacyRights",
+        linkTarget: "http://www.oracle.com/us/legal/privacy/index.html",
+      },
     ];
     // release the application bootstrap busy state
-    Context.getPageContext().getBusyContext().applicationBootstrapComplete();        
+    Context.getPageContext().getBusyContext().applicationBootstrapComplete();
   }
 
   announcementHandler = (event: any): void => {
-      this.message(event.detail.message);
-      this.manner(event.detail.manner);
-  }
+    this.message(event.detail.message);
+    this.manner(event.detail.manner);
+  };
 
   // called by navigation drawer toggle button and after selection of nav drawer item
   toggleDrawer = (): void => {
     this.sideDrawerOn(!this.sideDrawerOn());
-  }
+  };
 
-    // a close listener so we can move focus back to the toggle button when the drawer closes
-    openedChangedHandler = (event: CustomEvent): void => {
+  // a close listener so we can move focus back to the toggle button when the drawer closes
+  openedChangedHandler = (event: CustomEvent): void => {
     if (event.detail.value === false) {
-      const drawerToggleButtonElement = document.querySelector("#drawerToggleButton") as HTMLElement;
+      const drawerToggleButtonElement = document.querySelector(
+        "#drawerToggleButton"
+      ) as HTMLElement;
       drawerToggleButtonElement.focus();
     }
   };

@@ -7,10 +7,7 @@
  */
 import * as AccUtils from "../accUtils";
 class AboutViewModel {
-
-  constructor() {
-
-  }
+  constructor() {}
 
   /**
    * Optional ViewModel method invoked after the View is inserted into the

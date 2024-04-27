@@ -1,0 +1,85 @@
+.navbarContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+  background-color: var(--pico-background-color);
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-height: 90px;
+}
+.logotype {
+  display: block;
+  max-height: 2.5rem;
+  margin-left: 1rem;
+  width: auto;
+  height: auto;
+}
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+.linkButton {
+  min-width: 2rem;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  text-align: center;
+  background-color: var(--btnHover);
+}
+.active {
+  background-color: rgb(159, 155, 166);
+  color: black;
+  text-align: center;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+}
+.mobileLinks {
+  display: none;
+}
+
+.menuButton {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .menuButton {
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+  .links {
+    display: none;
+  }
+  .logotype {
+    display: none;
+  }
+  .mobileLinks {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    overflow: hidden;
+
+    background-color: var(--bg);
+  }
+}

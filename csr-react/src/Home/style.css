@@ -1,0 +1,38 @@
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 0rem 5rem 5rem;
+  height: 80vh;
+}
+.homeCard {
+  background-color: var(--bgSoft);
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  max-width: 40rem;
+  max-height: 60rem;
+}
+.cardButtons {
+  display: flex;
+  gap: 3rem;
+  padding-top: 1rem;
+  justify-content: center;
+}
+.imageHome {
+  display: block;
+  max-width: 30rem;
+  max-height: 60rem;
+  width: auto;
+  height: auto;
+  border-radius: 1rem;
+}
+
+@media (max-width: 55rem) {
+  .homeCard {
+    max-width: 30rem;
+  }
+  .imageHome {
+    display: none;
+  }
+}
