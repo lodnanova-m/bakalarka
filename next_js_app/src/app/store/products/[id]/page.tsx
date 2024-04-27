@@ -16,7 +16,7 @@ export default async function StorePage({ params }: any) {
   return (
     <div className={styles.container}>
       <Image
-        src={product.image}
+        src={`${process.env.REACT_APP_URL}/${product.image}`}
         alt={product.name}
         width={300}
         height={300}

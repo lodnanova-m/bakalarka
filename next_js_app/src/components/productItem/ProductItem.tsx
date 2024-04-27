@@ -11,7 +11,7 @@ const ProductItem = ({ item }: ProductProps) => {
     <div className={styles.productCard}>
       <h1>{item.name}</h1>
       <Image
-        src={item.image}
+        src={`${process.env.REACT_APP_URL}/${item.image}`}
         alt={item.name}
         width={300}
         height={400}
