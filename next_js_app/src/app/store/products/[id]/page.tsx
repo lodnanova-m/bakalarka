@@ -13,6 +13,7 @@ async function getProductById(productId: string) {
 export default async function StorePage({ params }: any) {
   const response = await getProductById(params.id);
   const product = response.product;
+  console.log(process.env.URL);
   return (
     <div className={styles.container}>
       <Image
