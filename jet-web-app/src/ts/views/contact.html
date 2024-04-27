@@ -4,8 +4,56 @@
  as shown at https://oss.oracle.com/licenses/upl/
  -->
 <div class="oj-hybrid-padding">
-  <h1>Customers Content Area</h1>
-  <div>
-      To change the content of this section, you will make edits to the customers.html file located in the /ts/views folder.
+  <h1>Contact</h1>
+  <div
+    class="oj-panel oj-flex oj-panel-shadow-sm oj-sm-margin-4x oj-sm-padding-12x oj-sm-justify-content-center oj-sm-align-items-center"
+  >
+    <oj-form-layout direction="row" max-columns="2">
+      <img
+        src="../../css/images/dress.jpg"
+        alt="dress"
+        width="400"
+        height="600"
+        class="homeImage"
+      />
+      <div class="oj-sm-margin-5x-bottom">
+        <oj-c-input-text
+          id="text-input"
+          length.max="200"
+          length.count-by="codeUnit"
+          label-hint="Name"
+          label-edge="inside"
+        ></oj-c-input-text>
+        <oj-c-input-text
+          id="text-input"
+          length.max="200"
+          length.count-by="codeUnit"
+          label-hint="Surname"
+          label-edge="inside"
+        ></oj-c-input-text>
+        <oj-c-input-text label-hint="Email">
+          <oj-c-button
+            slot="end"
+            display="icons"
+            size="[[ labelEdge() === 'top' ? 'sm' : null ]]"
+            :class="[[ { 'oj-sm-hide': hideButton() } ]]"
+            chroming="borderless"
+          >
+            <span slot="endIcon" class="oj-ux-ico-email"></span>
+          </oj-c-button>
+        </oj-c-input-text>
+        <oj-c-text-area
+          id="vertical"
+          resize-behavior="vertical"
+          label-hint="Message"
+        ></oj-c-text-area>
+        <oj-button
+          class="demo-button-purple oj-sm-margin-3x-vertical"
+          chroming="solid"
+        >
+          Send
+        </oj-button>
+      </div>
+    </oj-form-layout>
   </div>
 </div>

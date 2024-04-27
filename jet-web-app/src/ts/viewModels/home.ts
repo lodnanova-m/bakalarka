@@ -13,9 +13,16 @@ import "ojs/ojlistview";
 import "ojs/ojknockout";
 import "ojs/ojcomponentcore";
 import "ojs/ojbutton";
+import { ojButton } from "ojs/ojbutton";
+import * as ko from "knockout";
 
 class HomeViewModel {
-  constructor() {}
+  button1Text: string;
+  button2Text: string;
+  constructor() {
+    this.button1Text = "Shop now";
+    this.button2Text = "Learn more about us";
+  }
 
   /**
    * Optional ViewModel method invoked after the View is inserted into the
@@ -30,6 +37,9 @@ class HomeViewModel {
     document.title = "Home";
     // implement further logic if needed
   }
+  public buttonClick = (event: ojButton.ojAction) => {
+    return true;
+  };
 
   /**
    * Optional ViewModel method invoked after the View is disconnected from the DOM.

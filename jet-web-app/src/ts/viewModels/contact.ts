@@ -6,17 +6,40 @@
  * @ignore
  */
 import * as AccUtils from "../accUtils";
-class ContactViewModel {
-  constructor() {}
+import * as ko from "knockout";
+import "ojs/ojknockout";
+import "oj-c/input-text";
+import "ojs/ojbutton";
+import "ojs/ojlabel";
+import "ojs/ojradioset";
+import "ojs/ojcheckboxset";
+import "ojs/ojformlayout";
+import "oj-c/text-area";
 
-  /**
-   * Optional ViewModel method invoked after the View is inserted into the
-   * document DOM.  The application can put logic that requires the DOM being
-   * attached here.
-   * This method might be called multiple times - after the View is created
-   * and inserted into the DOM and after the View is reconnected
-   * after being disconnected.
-   */
+class ContactViewModel {
+  formState: ko.Observable<string>;
+  hideButton: ko.Computed<"oj-sm-hide" | "">;
+  labelEdge: ko.Observable<string>;
+  showValue: ko.Computed<boolean>;
+  valueEnabled: ko.Observable<string>;
+  constructor() {
+    this.formState = ko.observable("enabled");
+    this.valueEnabled = ko.observable("yes");
+    this.showValue = ko.computed(() => {
+      if (this.valueEnabled() === "no") {
+        return false;
+      }
+      return true;
+    });
+    this.hideButton = ko.computed(() => {
+      if (this.formState() === "readonly") {
+        return "oj-sm-hide";
+      }
+      return "";
+    });
+
+    this.labelEdge = ko.observable("inside");
+  }
   connected(): void {
     AccUtils.announce("Contact page loaded.");
     document.title = "Contact";
