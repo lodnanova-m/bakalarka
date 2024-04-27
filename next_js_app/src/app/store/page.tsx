@@ -8,6 +8,7 @@ async function getProducts() {
     next: { revalidate: 10 },
   });
   if (response.status !== 200) {
+    console.error(response);
     return null;
   }
   return response.json() as Promise<{ items: Product[] }>;
