@@ -5,29 +5,54 @@
  -->
 <div class="oj-hybrid-padding">
   <h1>Store</h1>
-  <div>
-    <div
-      data-bind="foreach: products"
-      class="oj-flex oj-sm-justify-content-center"
-    >
-      <oj-action-card
-        id="Default"
-        class="oj-sm-margin-2x demo-card-content oj-flex oj-sm-flex-direction-column oj-sm-justify-content-center oj-sm-align-items-center oj-bg-neutral-30"
-      >
-        <div
-          class="product-item oj-flex oj-sm-flex-direction-column oj-sm-justify-content-center oj-sm-align-items-center"
+  <div class="oj-flex oj-sm-justify-content-center">
+    <oj-bind-for-each data="[[products]]" >
+      <template>
+        <oj-c-action-card
+          on-oj-action="[[cardAction]]"
+          id="click"
+          class="oj-sm-margin-2x oj-flex oj-sm-flex-direction-column oj-sm-justify-content-center oj-sm-align-items-center"
         >
-          <h3 data-bind="text: name"></h3>
-          <img
-            data-bind="attr: {src: 'http://localhost:3000/' + image, alt: name}"
-            height="400"
-          />
-          <span
-            data-bind="text: `Price: €${price.toFixed(2)}`"
-            class="oj-typography-heading-md oj-sm-padding-2x"
-          ></span>
+          <div
+          
+            class="product-item oj-flex oj-sm-flex-direction-column oj-sm-justify-content-center oj-sm-align-items-center  oj-sm-padding-12x"
+          >
+            <h3>
+              <oj-bind-text value="[[$current.data.name]]"></oj-bind-text>
+            </h3>
+            <img
+              data-bind="attr: {src: 'http://localhost:3000/' + $current.data.image, alt: $current.data.name}"
+              height="400"
+            />
+            <span
+              data-bind="text: `Price: €${$current.data.price.toFixed(2)}`"
+              class="oj-typography-heading-md oj-sm-padding-2x"
+            ></span>
+          </div>
+          <div class="fs-identificator" style="display: none;">
+            <oj-bind-text value="[[$current.data.id]]"></oj-bind-text>
+          </div>
+        </oj-c-action-card>
+        <div id="dialogWrapper">
+          <oj-dialog
+            id="dialog1"
+            dialog-title="[[$current.data.name]]"
+            cancel-behavior="icon">
+            <div slot="body">
+              <oj-label-value label-edge="top">
+                <oj-bind-text value="[[$current.data.description]]"></oj-bind-text>
+              </oj-label-value>
+            </div>
+            <div slot="footer">
+              <oj-button>Buy</oj-button>
+              <oj-button id="okButton">Cancel</oj-button>
+            </div>
+          </oj-dialog>
         </div>
-      </oj-action-card>
-    </div>
+      </template>
+      <template slot='noData'>
+        <h1>No data</h1>
+      <template>
+    </oj-bind-for-each>
   </div>
 </div>

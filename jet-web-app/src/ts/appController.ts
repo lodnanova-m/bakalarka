@@ -89,6 +89,7 @@ class RootViewModel {
         detail: { label: "Store", iconClass: "oj-ux-ico-store" },
       },
     ];
+
     // router setup
     const router = new CoreRouter(navData, {
       urlAdapter: new UrlParamAdapter(),
@@ -101,7 +102,7 @@ class RootViewModel {
 
     // Setup the navDataProvider with the routes, excluding the first redirected
     // route.
-    this.navDataProvider = new ArrayDataProvider(navData.slice(1), {
+    this.navDataProvider = new ArrayDataProvider(navData.slice(1, 5), {
       keyAttributes: "path",
     });
 
@@ -150,6 +151,10 @@ class RootViewModel {
     ];
     // release the application bootstrap busy state
     Context.getPageContext().getBusyContext().applicationBootstrapComplete();
+  }
+
+  getRouter() {
+    return this.router;
   }
 
   announcementHandler = (event: any): void => {
