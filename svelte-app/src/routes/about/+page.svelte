@@ -25,6 +25,22 @@
 <svelte:head>
 	<title>About | Fashion Beast</title>
 	<meta name="description" content="About Fashion Beast company" />
+	<meta property="og:title" content="About | Fashion Beast" />
+	<meta
+		property="og:description"
+		content="The ultimate destination where style meets comfort and fashion
+	becomes accessible to everyone."
+	/>
+	<meta property="og:image" content="https://main.dg0s3ls9ozvcf.amplifyapp.com/about-page.png" />
+	<meta property="og:url" content="https://main.dg0s3ls9ozvcf.amplifyapp.com/" />
+	<meta name="twitter:title" content="About | Fashion Beast" />
+	<meta
+		name="twitter:description"
+		content="The ultimate destination where style meets comfort and fashion
+	becomes accessible to everyone.e"
+	/>
+	<meta name="twitter:url" content="https://main.dg0s3ls9ozvcf.amplifyapp.com/" />
+	<meta name="twitter:card" content="summary" />
 </svelte:head>
 
 <style>

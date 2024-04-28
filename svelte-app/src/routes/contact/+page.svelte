@@ -29,6 +29,14 @@
 	/>
 	<meta property="og:image" content="https://main.dg0s3ls9ozvcf.amplifyapp.com/contact-page.png" />
 	<meta property="og:url" content="https://main.dg0s3ls9ozvcf.amplifyapp.com/" />
+	<meta name="twitter:title" content="Contact | Fashion Beast" />
+	<meta
+		name="twitter:description"
+		content="The ultimate destination where style meets comfort and fashion
+	becomes accessible to everyone.e"
+	/>
+	<meta name="twitter:url" content="https://main.dg0s3ls9ozvcf.amplifyapp.com/" />
+	<meta name="twitter:card" content="summary" />
 </svelte:head>
 
 <style>

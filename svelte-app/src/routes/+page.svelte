@@ -13,6 +13,14 @@
 	/>
 	<meta property="og:image" content="https://main.dg0s3ls9ozvcf.amplifyapp.com/landing-page.png" />
 	<meta property="og:url" content="https://main.dg0s3ls9ozvcf.amplifyapp.com/" />
+	<meta name="twitter:title" content="Fashion Beast" />
+	<meta
+		name="twitter:description"
+		content="The ultimate destination where style meets comfort and fashion
+	becomes accessible to everyone.e"
+	/>
+	<meta name="twitter:url" content="https://main.dg0s3ls9ozvcf.amplifyapp.com/" />
+	<meta name="twitter:card" content="home" />
 </svelte:head>
 
 <div class="home">
