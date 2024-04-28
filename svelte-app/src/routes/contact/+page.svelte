@@ -19,8 +19,16 @@
 </div>
 
 <svelte:head>
-	<title>Contact</title>
+	<title>Contact | Fashion Beast</title>
 	<meta name="description" content="Contact form" />
+	<meta property="og:title" content="Contact | Fashion Beast" />
+	<meta
+		property="og:description"
+		content="The ultimate destination where style meets comfort and fashion
+	becomes accessible to everyone."
+	/>
+	<meta property="og:image" content="https://main.dg0s3ls9ozvcf.amplifyapp.com/contact-page.png" />
+	<meta property="og:url" content="https://main.dg0s3ls9ozvcf.amplifyapp.com/" />
 </svelte:head>
 
 <style>

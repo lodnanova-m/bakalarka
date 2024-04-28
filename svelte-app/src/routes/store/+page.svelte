@@ -23,8 +23,16 @@
 </div>
 
 <svelte:head>
-	<title>Store</title>
+	<title>Store | Fashion Beast</title>
 	<meta name="description" content="Store including all products" />
+	<meta property="og:title" content="Store | Fashion Beast" />
+	<meta
+		property="og:description"
+		content="The ultimate destination where style meets comfort and fashion
+	becomes accessible to everyone."
+	/>
+	<meta property="og:image" content="https://main.dg0s3ls9ozvcf.amplifyapp.com/store-page.png" />
+	<meta property="og:url" content="https://main.dg0s3ls9ozvcf.amplifyapp.com/" />
 </svelte:head>
 
 <style>
