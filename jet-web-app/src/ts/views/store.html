@@ -6,16 +6,26 @@
 <div class="oj-hybrid-padding">
   <h1>Store</h1>
   <div>
-    <div data-bind="foreach: products">
-      <oj-action-card id="Default" class="oj-sm-margin-2x demo-card-content">
-        <div class="product-item">
+    <div
+      data-bind="foreach: products"
+      class="oj-flex oj-sm-justify-content-center"
+    >
+      <oj-action-card
+        id="Default"
+        class="oj-sm-margin-2x demo-card-content oj-flex oj-sm-flex-direction-column oj-sm-justify-content-center oj-sm-align-items-center oj-bg-neutral-30"
+      >
+        <div
+          class="product-item oj-flex oj-sm-flex-direction-column oj-sm-justify-content-center oj-sm-align-items-center"
+        >
           <h3 data-bind="text: name"></h3>
-          <p data-bind="text: description"></p>
           <img
             data-bind="attr: {src: 'http://localhost:3000/' + image, alt: name}"
-            style="width: 100px"
+            height="400"
           />
-          <span data-bind="text: `Price: €${price.toFixed(2)}`"></span>
+          <span
+            data-bind="text: `Price: €${price.toFixed(2)}`"
+            class="oj-typography-heading-md oj-sm-padding-2x"
+          ></span>
         </div>
       </oj-action-card>
     </div>
