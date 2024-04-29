@@ -1,6 +1,6 @@
 import { useEffect, useState } from "preact/hooks";
 import "./style.css";
-import { getProductById } from "../../api";
+import { environment, getProductById } from "../../api";
 import { Button } from "../../components/Button/Button";
 import { useLocation } from "preact-iso";
 
@@ -26,7 +26,12 @@ export function StoreItem() {
 
   return (
     <div class="productContainer">
-      <img src={"/" + product.image} alt={product.name} class="itemPhoto" />
+      <img
+        src={`${environment.apiUrl}/${product.image}`}
+        alt={product.name}
+        class="itemPhoto"
+        height={90}
+      />
       <div class="box">
         <div class="info">
           <h1>{product.name}</h1>
