@@ -1,7 +1,7 @@
 // apiService.js
 export const environment = {
   // Replace with your actual API URL
-  apiUrl: "https://master.d3d95ljo92pafp.amplifyapp.com/",
+  apiUrl: "https://master.d3d95ljo92pafp.amplifyapp.com",
 };
 
 export const getAllProducts = async () => {
