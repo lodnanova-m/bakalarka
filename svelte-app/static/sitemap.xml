@@ -1,36 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?> 
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
-<url>
-  <loc>http://main.dg0s3ls9ozvcf.amplifyapp.com/</loc>
-</url>
-<url>
-  <loc>http://main.dg0s3ls9ozvcf.amplifyapp.com/about</loc>
-</url>
-<url>
-  <loc>http://main.dg0s3ls9ozvcf.amplifyapp.com/store</loc>
-</url>
-<url>
-  <loc>http://main.dg0s3ls9ozvcf.amplifyapp.com/contact</loc>
-</url>
-<url>
-  <loc>http://main.dg0s3ls9ozvcf.amplifyapp.com/store/1</loc>
-</url>
-<url>
-  <loc>http://main.dg0s3ls9ozvcf.amplifyapp.com/store/2</loc>
-</url>
-<url>
-  <loc>http://main.dg0s3ls9ozvcf.amplifyapp.com/store/3</loc>
-</url>
-<url>
-  <loc>http://main.dg0s3ls9ozvcf.amplifyapp.com/store/4</loc>
-</url>
-<url>
-  <loc>http://main.dg0s3ls9ozvcf.amplifyapp.com/store/5</loc>
-</url>
-<url>
-  <loc>http://main.dg0s3ls9ozvcf.amplifyapp.com/store/6</loc>
-</url>
-<url>
-  <loc>http://main.dg0s3ls9ozvcf.amplifyapp.com/store/7</loc>
-</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://main.dg0s3ls9ozvcf.amplifyapp.com/</loc>
+    </url>
+    <url>
+        <loc>http://main.dg0s3ls9ozvcf.amplifyapp.com/about</loc>
+    </url>
+    <url>
+        <loc>http://main.dg0s3ls9ozvcf.amplifyapp.com/store</loc>
+    </url>
+    <url>
+        <loc>http://main.dg0s3ls9ozvcf.amplifyapp.com/contact</loc>
+    </url>
 </urlset>
