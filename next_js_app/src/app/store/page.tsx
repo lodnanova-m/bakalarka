@@ -3,9 +3,8 @@ import ProductList from "@/components/ProductList/ProductList";
 import { Product } from "@/models/models";
 
 async function getProducts() {
-  console.log(process.env.URL);
   const response = await fetch(`${process.env.URL}/products`, {
-    next: { revalidate: 10 },
+    cache: "no-store",
   });
   if (response.status !== 200) {
     console.error(response);

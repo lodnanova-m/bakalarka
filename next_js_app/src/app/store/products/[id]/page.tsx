@@ -3,10 +3,7 @@ import styles from "./singleStoreItem.module.css";
 import { Product } from "@/models/models";
 
 async function getProductById(productId: string) {
-  const response = await fetch(`${process.env.URL}/products/${productId}`, {
-    method: "GET",
-    next: { revalidate: 10 },
-  });
+  const response = await fetch(`${process.env.URL}/products/${productId}`);
   return response.json() as Promise<{ item: Product }>;
 }
 
@@ -19,9 +16,9 @@ export default async function StorePage({ params }: any) {
       <Image
         src={`${process.env.URL}/${product.image}`}
         alt={product.name}
-        width={300}
-        height={300}
         className={styles.itemPhoto}
+        width={500}
+        height={700}
       />
       <div className={styles.box}>
         <div className={styles.info}>
