@@ -1,10 +1,16 @@
 import styles from "./store.module.css";
 import ProductList from "@/components/ProductList/ProductList";
 import { Product } from "@/models/models";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Store | Fashion Store",
+  description: "Fashion store products",
+};
 
 async function getProducts() {
   const response = await fetch(`${process.env.URL}/products`, {
-    cache: "no-store",
+    next: { revalidate: 1000 },
   });
   if (response.status !== 200) {
     console.error(response);

@@ -1,4 +1,11 @@
+import { Metadata } from "next";
 import style from "./about.module.css";
+
+export const metadata: Metadata = {
+  title: "About | Fashion Store",
+  description: "About Fashion Beast company",
+};
+
 const Page = () => {
   return (
     <div className={style.container}>

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./home.module.css";
 import Link from "next/link";
-import homePic from "../../assets/home_image.jpg";
+import homePicture from "./../../assets/home_image.jpg";
 
 const Home = () => {
   return (
@@ -27,7 +27,12 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <Image src={homePic} alt="home page image" className={styles.imageHome} />
+      <Image
+        src={homePicture}
+        alt="home page image"
+        className={styles.imageHome}
+        priority
+      />
     </div>
   );
 };

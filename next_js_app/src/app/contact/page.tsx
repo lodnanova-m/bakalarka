@@ -1,6 +1,13 @@
 import Image from "next/image";
 import styles from "./contact.module.css";
 import picture from "../../../assets/dress.jpg";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact | Fashion Store",
+  description: "Contact form",
+};
+
 const Contact = () => {
   return (
     <div className={styles.container}>
