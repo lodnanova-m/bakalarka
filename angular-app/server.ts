@@ -11,7 +11,7 @@ export function app(): express.Express {
   const serverDistFolder = dirname(fileURLToPath(import.meta.url));
   const browserDistFolder = resolve(serverDistFolder, '../browser');
   const indexHtml = join(serverDistFolder, 'index.server.html');
-  const fs = require("fs");
+  const fs = require('fs');
   const commonEngine = new CommonEngine();
 
   server.set('view engine', 'html');
@@ -20,27 +20,25 @@ export function app(): express.Express {
   // Example Express Rest API endpoints
   // server.get('/api/**', (req, res) => { });
   // Serve static files from /browser
-  server.get('*.*', express.static(browserDistFolder, {
-    maxAge: '1y'
-  }));
+  server.get(
+    '*.*',
+    express.static(browserDistFolder, {
+      maxAge: '1y',
+    })
+  );
 
   // All regular routes use the Angular engine
-  server.get("/products", (req, res) => {
-
-    fs.readFile("db.json", "utf8", (err:any , data:any) => {
-      if (err) {
-        console.log(err);
-        res.status(500).send("Internal Server Error");
-        return;
-      }
-  
-      const jsonData = JSON.parse(data);
-  
-      res.status(200).json({
-        items: jsonData.products,
-        total: jsonData.products.length,
-      });
-    });
+  server.get('/products', (req, res, next) => {
+    const { protocol, originalUrl, baseUrl, headers } = req;
+    commonEngine
+      .render({
+        bootstrap,
+        documentFilePath: indexHtml,
+        url: `${protocol}://${headers.host}${originalUrl}`,
+        publicPath: browserDistFolder,
+        providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }],
+      })
+      .then((html) => res.send(html));
   });
 
   return server;
