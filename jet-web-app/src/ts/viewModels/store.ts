@@ -27,7 +27,8 @@ type Product = {
 
 class StoreViewModel {
   keyAttributes = "id";
-  restServerURLProducts: string = "http://localhost:3000/products";
+  restServerURLProducts: string =
+    "https://master.d3d95ljo92pafp.amplifyapp.com/products";
   products = ko.observableArray<Product>([]);
   handleOKClose: HTMLElement | null;
 
