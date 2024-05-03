@@ -31,17 +31,6 @@
       }
     },
     {
-      "path": "/*.*",
-      "target": {
-        "kind": "Static",
-        "cacheControl": "public, max-age=1, immutable"
-      },
-      "fallback": {
-        "kind": "Compute",
-        "src": "default"
-      }
-    },
-    {
       "path": "/*",
       "target": {
         "kind": "Compute",
