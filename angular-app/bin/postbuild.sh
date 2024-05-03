@@ -6,6 +6,6 @@ mkdir -p ./.amplify-hosting/compute
 
 cp -r ./dist/angular-app/server ./.amplify-hosting/compute/default
 
-cp -r ./dist/angular-app/browser ./.amplify-hosting/static
+cp -r ./dist/angular-app/browser ./.amplify-hosting/static-test
 
 cp deploy-manifest.json ./.amplify-hosting/deploy-manifest.json
