@@ -9,7 +9,7 @@ import bootstrap from './src/main.server';
 export function app(): express.Express {
   const server = express();
   const serverDistFolder = dirname(fileURLToPath(import.meta.url));
-  const browserDistFolder = resolve(serverDistFolder, '../../static-test');
+  const browserDistFolder = resolve(serverDistFolder, '../../static');
   const indexHtml = join(serverDistFolder, 'index.server.html');
   const fs = require('fs');
   const commonEngine = new CommonEngine();
@@ -30,12 +30,6 @@ export function app(): express.Express {
   // All regular routes use the Angular engine
   server.get('*', (req, res, next) => {
     const { protocol, originalUrl, baseUrl, headers } = req;
-
-    res.send(
-      `${protocol} - ${headers.host} - ${originalUrl} - ${serverDistFolder} - ${browserDistFolder} - ${req.baseUrl} - ${indexHtml}`
-    );
-
-    return;
 
     commonEngine
       .render({
