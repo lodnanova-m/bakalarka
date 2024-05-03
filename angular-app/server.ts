@@ -30,6 +30,13 @@ export function app(): express.Express {
   // All regular routes use the Angular engine
   server.get('*', (req, res, next) => {
     const { protocol, originalUrl, baseUrl, headers } = req;
+
+    res.send(
+      `${protocol} - ${headers.host} - ${originalUrl} - ${serverDistFolder} - ${browserDistFolder}`
+    );
+
+    return;
+
     commonEngine
       .render({
         bootstrap,
