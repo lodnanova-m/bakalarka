@@ -32,7 +32,7 @@ export function app(): express.Express {
     const { protocol, originalUrl, baseUrl, headers } = req;
 
     res.send(
-      `${protocol} - ${headers.host} - ${originalUrl} - ${serverDistFolder} - ${browserDistFolder}`
+      `${protocol} - ${headers.host} - ${originalUrl} - ${serverDistFolder} - ${browserDistFolder} - ${req.baseUrl} - ${indexHtml}`
     );
 
     return;
