@@ -10,8 +10,9 @@
 	{#each data.products as product (product.id)}
 		<div class="productCard">
 			<h2>{product.name}</h2>
-			<img src={product.image} alt={product.name} class="itemPhoto" />
-
+			<div class="imgContainer">
+				<img src={product.image} alt={product.name} class="itemPhoto" />
+			</div>
 			<div class="buttons">
 				<a href="store/{product.id}">
 					<button>Read more..</button>
@@ -61,7 +62,11 @@
 		margin: 1rem;
 		border-radius: 1rem;
 		padding: 1.5rem;
+		min-height: 50rem;
 		max-width: 50%;
+	}
+	.imgContainer {
+		min-height: 40rem;
 	}
 	.itemPhoto {
 		object-fit: cover;
