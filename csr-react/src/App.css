@@ -8,7 +8,7 @@
 }
 
 .app-container {
-  min-height: 400rem;
+  min-height: 100rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
