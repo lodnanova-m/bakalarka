@@ -11,7 +11,6 @@ export function StoreItem() {
   useEffect(() => {
     const fetchProduct = async () => {
       const fetchedProduct = await getProductById(productId);
-      console.log(fetchedProduct);
 
       if (fetchedProduct) {
         setProduct(fetchedProduct.item);

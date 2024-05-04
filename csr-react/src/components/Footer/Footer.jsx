@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom";
 import logotype from "../../assets/logotype.png";
 import "./style.css";
 export function Footer() {
   return (
     <footer class="footer">
-      <div>
+      <Link to="/">
         <img src={logotype} alt="logotype" class="logotype" />
-      </div>
+      </Link>
       <div class="initials">
         <h1>Michaela Lodňanová</h1>
         <h2>525221</h2>

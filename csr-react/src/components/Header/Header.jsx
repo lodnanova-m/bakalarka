@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import logotype from "../../assets/logotype.png";
 import icon from "../../assets/images/menu_hamburger.svg";
@@ -11,50 +11,51 @@ export function Header() {
   return (
     <header>
       <nav className="navbarContainer">
-        <a href="/" className="header">
+        <Link to="/" className="header">
           <img src={logo} alt="logo" className="logo" />
           <img src={logotype} alt="logotype" className="logotype" />
-        </a>
+        </Link>
         <div>
           <div className="links">
-            <a
-              href="/"
+            <Link
+              to="/"
               className={currentPath === "/" ? "active" : "linkButton"}
             >
               Home
-            </a>
-            <a
-              href="/about"
+            </Link>
+
+            <Link
+              to="/about"
               className={currentPath === "/about" ? "active" : "linkButton"}
             >
               About
-            </a>
-            <a
-              href="/store"
+            </Link>
+            <Link
+              to="/store"
               className={currentPath === "/store" ? "active" : "linkButton"}
             >
               Store
-            </a>
-            <a
-              href="/contact"
+            </Link>
+            <Link
+              to="/contact"
               className={currentPath === "/contact" ? "active" : "linkButton"}
             >
               Contact
-            </a>
+            </Link>
           </div>
           <div className="mobileLinks">
-            <a href="/" className="linkButton">
+            <Link to="/" className="linkButton">
               Home
-            </a>
-            <a href="/about" className="linkButton">
+            </Link>
+            <Link to="/about" className="linkButton">
               About
-            </a>
-            <a href="/store" className="linkButton">
+            </Link>
+            <Link to="/store" className="linkButton">
               Store
-            </a>
-            <a href="/contact" className="linkButton">
+            </Link>
+            <Link to="/contact" className="linkButton">
               Contact
-            </a>
+            </Link>
           </div>
           <button className="menuButton">
             <img src={icon} alt="hamburger menu icon" width="30" height="30" />

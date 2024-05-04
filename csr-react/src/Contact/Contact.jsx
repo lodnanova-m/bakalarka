@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import contactImage from "../assets/dress.jpg";
 import "./style.css";
 
@@ -13,7 +14,9 @@ export function Contact() {
           <input type="email" placeholder="Email Address" />
           <input type="text" placeholder="Phone Number (Optional)" />
           <textarea cols={30} rows={10} placeholder="Message"></textarea>
-          <button type="submit">Send</button>
+          <Link to="/">
+            <button type="submit">Send</button>
+          </Link>
         </form>
       </div>
     </div>

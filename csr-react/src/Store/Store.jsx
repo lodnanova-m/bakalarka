@@ -1,24 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./style.css";
 import { getAllProducts } from "../api";
+import { Button } from "../components/Button/Button";
 export function Store() {
-  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     const fetchProducts = async () => {
       var items = await getAllProducts();
       setProducts(items || []); // Fallback to an empty array if null is returned
-      console.log(items);
     };
 
     fetchProducts();
   }, []);
-
-  const navigateToItem = (itemId) => {
-    navigate(`/store/${itemId}`);
-  };
 
   return (
     <div className="storeContainer">
@@ -31,9 +26,7 @@ export function Store() {
             className="itemPhoto"
           />
           <div className="buttons">
-            <button onClick={() => navigateToItem(item.id)}>
-              Read more...
-            </button>
+            <Button label={"Read more..."} path={`/store/${item.id}`}></Button>
             <button>Add to cart for {item.price}€</button>
           </div>
         </div>

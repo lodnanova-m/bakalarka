@@ -12,15 +12,17 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
-      <Routes>
-        <Route path="/">
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="store" element={<Store />} />{" "}
-          <Route path="store/:productId" element={<StoreItem />} />{" "}
-        </Route>
-      </Routes>
+      <div className="app-container">
+        <Routes>
+          <Route path="/">
+            <Route index element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="store" element={<Store />} />{" "}
+            <Route path="store/:productId" element={<StoreItem />} />{" "}
+          </Route>
+        </Routes>
+      </div>
       <Footer></Footer>
     </div>
   );
