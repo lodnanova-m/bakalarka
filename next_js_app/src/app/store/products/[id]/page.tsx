@@ -19,6 +19,7 @@ export default async function StorePage({ params }: any) {
         className={styles.itemPhoto}
         width={500}
         height={700}
+        sizes="(max-width: 55rem) 0px, (max-width: 1200px) 50vw, 33vw"
       />
       <div className={styles.box}>
         <div className={styles.info}>

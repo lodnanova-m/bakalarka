@@ -31,6 +31,7 @@ const Home = () => {
         src={homePicture}
         alt="home page image"
         className={styles.imageHome}
+        sizes="(max-width: 55rem) 0px, (max-width: 1200px) 50vw, 33vw"
         priority
       />
     </div>
