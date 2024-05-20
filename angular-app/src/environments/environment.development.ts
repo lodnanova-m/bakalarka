@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:3000',
+  apiUrl: 'https://master.d3d95ljo92pafp.amplifyapp.com/',
 };
