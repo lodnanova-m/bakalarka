@@ -16,6 +16,13 @@
   border-radius: 1rem;
   padding: 1.5rem;
   max-width: 50%;
+  min-height: 50rem;
+}
+.photoContainer {
+  min-height: 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .itemPhoto {
   object-fit: cover;

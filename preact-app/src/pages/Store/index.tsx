@@ -24,11 +24,13 @@ export function Store() {
       {products.map((item, index) => (
         <div key={index} class="productCard">
           <h1>{item.name}</h1>
-          <img
-            src={`${environment.apiUrl}/${item.image}`}
-            alt={item.name}
-            class="itemPhoto"
-          />
+          <div class="photoContainer">
+            <img
+              src={`${environment.apiUrl}/${item.image}`}
+              alt={item.name}
+              class="itemPhoto"
+            />
+          </div>
           <div class="buttons">
             <button onClick={() => navigateToItem(item.id)}>
               Read more...
