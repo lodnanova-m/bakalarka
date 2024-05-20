@@ -1,29 +1,65 @@
-# AngularApp
+# Angular Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.1.
-`npm install -g @angular/cli`
-`npm install`
+This prototype is a part of my bachelor's thesis. The project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.1.
 
-## Development server
+## Prerequisites
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Ensure you have the following installed on your system:
 
-## Code scaffolding
+- [Node.js](https://nodejs.org/en/) (version 14.x or later)
+- [npm](https://www.npmjs.com/get-npm) (version 6.x or later)
+- [Angular CLI](https://angular.io/cli) (version 17.2.1 or later)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Install the dependencies:
+```sh
+npm install
+```
+### Available Scripts
 
-## Build
+In the project directory, you can run:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```sh
+ng serve
+```
+Runs the app in development mode.\
+Open [http://localhost:4200](http://localhost:4200) to view it in your browser.
 
-## Running unit tests
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```sh
+ng build
+```
+Builds the app for production to the `dist` folder.\
+It correctly bundles Angular in production mode and optimizes the build for the best performance.
 
-## Running end-to-end tests
+### Deployment
+#### Build settings for AWS Amplify:
+```yml
+version: 1
+applications:
+  - frontend:
+      phases:
+        preBuild:
+          commands:
+            - npm ci
+        build:
+          commands:
+            - npm run build
+      artifacts:
+        baseDirectory: .amplify-hosting
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+    appRoot: angular-app
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+#### Environment variables:
+in directory /angular-app/src/environments change apiUrl to the backend url in both files.
+```
+AMPLIFY_DIFF_DEPLOY=false
+AMPLIFY_DIFF_DEPLOY=angular-app
+_CUSTOM_IMAGE=public.ecr.aws/docker/library/node:18.17.0
+```
