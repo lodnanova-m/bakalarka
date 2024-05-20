@@ -11,7 +11,6 @@ export type Product = {
   image: string;
 };
 export const getAllProducts = async () => {
-  console.log("volam sa");
   try {
     const response = await fetch(`${environment.apiUrl}/products`);
     if (!response.ok) {
