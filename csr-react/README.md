@@ -45,7 +45,7 @@ Your app is ready to be deployed!
 
 ### Deployment
 #### Build settings for AWS Amplify:
-```
+```yml
 version: 1
 applications:
   - frontend:
@@ -67,11 +67,9 @@ applications:
 
 ```
 #### Environment variables:
+url_backend = URL of the backend server.
 ```
 AMPLIFY_DIFF_DEPLOY=false
 AMPLIFY_DIFF_DEPLOY=csr-react
-```
-url_backend = URL of the backend server.
-```
 REACT_APP_URL=url_backend
 ```
