@@ -10,7 +10,7 @@ const Footer = () => {
       <div className={styles.initials}>
         <h1>Michaela Lodňanová</h1>
         <h2>525221</h2>
-        <h3>Bachelor's thesis</h3>
+        <h3>Bachelor&apos;s thesis</h3>
       </div>
     </div>
   );
