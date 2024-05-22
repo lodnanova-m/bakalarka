@@ -10,7 +10,7 @@ Ensure you have the following installed on your system:
 - [npm](https://www.npmjs.com/get-npm) (version 6.x or later)
 
 ## Getting Started
-
+Copy `.env.example` file and name it `.env`.
 To get a local copy up and running, follow these simple steps.
 
 ### Install the dependencies:
