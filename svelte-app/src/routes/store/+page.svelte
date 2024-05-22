@@ -51,6 +51,7 @@
 		gap: 1rem;
 		justify-content: center;
 		padding-top: 4rem;
+		margin: 0 10rem;
 	}
 	.productCard {
 		background-color: var(--bgSoft);

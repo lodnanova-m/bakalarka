@@ -36,12 +36,12 @@ export function StoreItem() {
         <div class="info">
           <h1>{product.name}</h1>
           <p>{product.description}</p>
-        </div>
-        <div class="button">
-          <Button
-            label={`Add to cart for ${product.price}`}
-            path={"/"}
-          ></Button>
+          <div class="button">
+            <Button
+              label={`Add to cart for ${product.price}€`}
+              path={"/"}
+            ></Button>
+          </div>
         </div>
       </div>
     </div>

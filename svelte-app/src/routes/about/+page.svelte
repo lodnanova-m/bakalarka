@@ -56,7 +56,7 @@
 		background-color: var(--bgSoft);
 		padding: 2rem 3rem;
 		border-radius: 1rem;
-		max-width: 50%;
+		max-width: 40rem;
 	}
 	@media (max-width: 60rem) {
 		.about {
