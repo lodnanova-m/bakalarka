@@ -20,10 +20,6 @@
   height: 18px;
 }
 
-.demo-oracle-icon:before {
-  content: url("images/logotype.png");
-}
-
 html:not([dir="rtl"]) .demo-oracle-icon {
   padding-right: 4px;
 }
