@@ -131,7 +131,7 @@
 	}
 
 	@media (max-width: 55rem) {
-		.container {
+		.navbarContainer {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
