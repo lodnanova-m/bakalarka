@@ -1,35 +1,39 @@
-.home
-{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    margin: 5rem 0;
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 0rem;
+  padding-top: 4rem;
+  height: 60rem;
 }
 .homeCard {
-    background-color: var(--bgSoft);
-    padding: 2rem 3rem ;
-    border-radius: 1rem;
-    max-width: 40rem;
-    max-height: 60rem;
+  background-color: var(--bgSoft);
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  max-width: 40rem;
+  max-height: 60rem;
 }
-.cardButtons
-{
-    display: flex;
-    gap: 3rem;
-    padding-top: 1rem;
-    justify-content: center;
+.cardButtons {
+  display: flex;
+  gap: 3rem;
+  padding-top: 1rem;
+  justify-content: center;
 }
-.imageHome{
-    border-radius: 1rem;
+.imageHome {
+  display: block;
+  max-width: 30rem;
+  max-height: 60rem;
+  width: auto;
+  height: auto;
+  border-radius: 1rem;
 }
 
 @media (max-width: 55rem) {
-    .homeCard {
-        max-width: 30rem;
-    }
-    .imageHome
-    {
-        display: none;
-    }
+  .homeCard {
+    max-width: 30rem;
+  }
+  .imageHome {
+    display: none;
+  }
 }
