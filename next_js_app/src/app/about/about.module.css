@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  margin: 10rem;
+  padding-top: 4rem;
 }
 .card {
   background-color: var(--bgSoft);

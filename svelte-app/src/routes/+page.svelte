@@ -49,11 +49,12 @@
 <style>
 	.home {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
 		gap: 2rem;
-		margin: 5rem 5rem 0rem 5rem;
-		height: 80vh;
+		margin: 0rem;
+		padding-top: 4rem;
+		height: 60rem;
 	}
 	.homeCard {
 		background-color: var(--bgSoft);

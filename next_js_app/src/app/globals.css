@@ -10,7 +10,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
   color: var(--text);
@@ -28,22 +29,22 @@ a {
 }
 
 h1 {
-    font-size: 2rem;
-    font-weight: 900;
-    color: var(--textSoft);
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--textSoft);
 }
 
 h2 {
-    font-size: 1rem;
-    font-weight: 200;
-    color: var(--text);
+  font-size: 1rem;
+  font-weight: 200;
+  color: var(--text);
 }
 
 p {
-    font-size: 1.2rem;
-    font-weight: 100;
-    font-style: italic;
-    margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 100;
+  font-style: italic;
+  margin-top: 1rem;
 }
 
 .container {
@@ -57,17 +58,17 @@ p {
 }
 
 button {
-    cursor: pointer;
-    border: none;
-    background-color: var(--btn);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    font-weight: bold;
+  cursor: pointer;
+  border: none;
+  background-color: var(--btn);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
 }
 
 button:hover {
-    background-color: var(--btnHover);
+  background-color: var(--btnHover);
 }
 
 loadingContainer {

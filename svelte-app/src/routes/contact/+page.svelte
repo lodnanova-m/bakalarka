@@ -46,6 +46,7 @@
 		gap: 100px;
 		padding: 2rem;
 		margin-top: 1rem;
+		height: 60rem;
 	}
 
 	.imageContainer {

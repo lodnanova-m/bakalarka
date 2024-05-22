@@ -11,7 +11,7 @@
 		<div class="productCard">
 			<h2>{product.name}</h2>
 			<div class="imgContainer">
-				<img src={product.image} alt={product.name} class="itemPhoto" />
+				<img src={product.image} alt={product.name} class="itemPhoto" height={400} width={300} />
 			</div>
 			<div class="buttons">
 				<a href="store/{product.id}">
@@ -50,29 +50,25 @@
 		flex-wrap: wrap;
 		gap: 1rem;
 		justify-content: center;
-		padding: 2rem 0;
+		padding-top: 4rem;
 	}
 	.productCard {
 		background-color: var(--bgSoft);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
 		gap: 1rem;
 		margin: 1rem;
 		border-radius: 1rem;
 		padding: 1.5rem;
-		min-height: 50rem;
 		max-width: 50%;
 	}
 	.imgContainer {
-		min-height: 40rem;
+		min-height: 20rem;
 	}
 	.itemPhoto {
 		object-fit: cover;
 		border-radius: 1rem;
-		width: 400px;
-		height: auto;
 	}
 	.buttons {
 		display: flex;

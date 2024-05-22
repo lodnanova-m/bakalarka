@@ -49,8 +49,8 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 2rem;
-		margin-top: 5rem;
-		min-height: 80vh;
+		padding-top: 4rem;
+		height: 60rem;
 	}
 	.card {
 		background-color: var(--bgSoft);
@@ -59,6 +59,9 @@
 		max-width: 50%;
 	}
 	@media (max-width: 60rem) {
+		.about {
+			flex-direction: column;
+		}
 		.card {
 			max-width: 100%;
 		}

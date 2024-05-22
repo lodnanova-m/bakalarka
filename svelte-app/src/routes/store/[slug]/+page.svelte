@@ -4,7 +4,7 @@
 </script>
 
 <div class="productContainer">
-	<img src={data.image} alt="product.name" class="itemPhoto" />
+	<img src={data.image} alt="product.name" class="itemPhoto" width={500} height={700} />
 	<div class="box">
 		<div class="info">
 			<h1>{data.name}</h1>
@@ -46,8 +46,6 @@
 	}
 	.itemPhoto {
 		border-radius: 1rem;
-		width: 28rem;
-		height: 40rem;
 	}
 	.info {
 		display: flex;

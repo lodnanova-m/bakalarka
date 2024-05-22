@@ -3,6 +3,7 @@
 	import logo from '../assets/logo.png';
 	import logotype from '../assets/logotype.png';
 	import icon from '../assets/images/menu_hamburger.svg';
+	import { page } from '$app/stores';
 </script>
 
 <nav class="navbarContainer">
@@ -12,16 +13,30 @@
 	</a>
 	<div>
 		<div class="links">
-			<a href="/" class="linkButton">Home</a>
-			<a href="/about" class="linkButton">About</a>
-			<a href="/store" class="linkButton">Store</a>
-			<a href="/contact" class="linkButton">Contact</a>
+			<a href="/" class={$page.url.pathname === '/' ? 'linkButton active' : 'linkButton'}>Home</a>
+			<a href="/about" class={$page.url.pathname === '/about' ? 'linkButton active' : 'linkButton'}
+				>About</a
+			>
+			<a href="/store" class={$page.url.pathname === '/store' ? 'linkButton active' : 'linkButton'}
+				>Store</a
+			>
+			<a
+				href="/contact"
+				class={$page.url.pathname === '/contact' ? 'linkButton active' : 'linkButton'}>Contact</a
+			>
 		</div>
 		<div class="mobileLinks">
-			<a href="/" class="linkButton">Home</a>
-			<a href="/about" class="linkButton">About</a>
-			<a href="/store" class="linkButton">Store</a>
-			<a href="/contact" class="linkButton">Contact</a>
+			<a href="/" class={$page.url.pathname === '/' ? 'linkButton active' : 'linkButton'}>Home</a>
+			<a href="/about" class={$page.url.pathname === '/about' ? 'linkButton active' : 'linkButton'}
+				>About</a
+			>
+			<a href="/store" class={$page.url.pathname === '/store' ? 'linkButton active' : 'linkButton'}
+				>Store</a
+			>
+			<a
+				href="/contact"
+				class={$page.url.pathname === '/contact' ? 'linkButton active' : 'linkButton'}>Contact</a
+			>
 		</div>
 		<button class="menuButton">
 			<img src={icon} alt="hamburger menu icon" width="30" height="30" />
@@ -36,7 +51,7 @@
 	<div class="initials">
 		<h1>Michaela Lodňanová</h1>
 		<h2>525221</h2>
-		<h3>Bakalárska práca</h3>
+		<h3>Bachelor's thesis</h3>
 	</div>
 </footer>
 

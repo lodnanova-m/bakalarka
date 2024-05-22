@@ -1,12 +1,11 @@
 :root {
-	--bg: #13171f;
+	--bg: #0d0c22;
 	--bgSoft: #2d2b42;
 	--text: white;
 	--textSoft: #e5e5e5;
 	--btn: #10182c;
 	--btnHover: #30426f;
 }
-
 * {
 	margin: 0;
 	padding: 0;
@@ -36,7 +35,7 @@ h1 {
 }
 
 h2 {
-	font-size: 2rem;
+	font-size: 1rem;
 	font-weight: 200;
 	color: var(--text);
 }
