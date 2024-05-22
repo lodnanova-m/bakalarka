@@ -10,7 +10,6 @@ export const metadata: Metadata = {
   title: "Fashion Store",
   description:
     "A simple fashion store for everyone who loves fashion and style.",
-  
 };
 
 export default function RootLayout({

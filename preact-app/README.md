@@ -9,8 +9,8 @@ Ensure you have the following installed on your system:
 - [Node.js](https://nodejs.org/en/) (version 14.x or later)
 - [npm](https://www.npmjs.com/get-npm) (version 6.x or later)
 
-
 ### Install the dependencies:
+
 ```sh
 npm install
 ```
@@ -36,9 +36,10 @@ npm run build
 Builds the app for production to the dist folder.
 It correctly bundles Preact in production mode and optimizes the build for the best performance.
 
-
 ### Deployment
+
 #### Build settings for AWS Amplify:
+
 ```yml
 version: 1
 applications:
@@ -53,13 +54,15 @@ applications:
       artifacts:
         baseDirectory: dist
         files:
-          - '**/*'
+          - "**/*"
       cache:
         paths:
           - .npm/**/*
     appRoot: preact-app
 ```
+
 #### Environment variables:
+
 ```
 AMPLIFY_DIFF_DEPLOY=false
 AMPLIFY_MONOREPO_APP_ROOT=preact-app

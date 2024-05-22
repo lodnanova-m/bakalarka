@@ -44,7 +44,9 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 ### Deployment
+
 #### Build settings for AWS Amplify:
+
 ```yml
 version: 1
 applications:
@@ -59,15 +61,17 @@ applications:
       artifacts:
         baseDirectory: build
         files:
-          - '**/*'
+          - "**/*"
       cache:
         paths:
           - .npm/**/*
     appRoot: csr-react
-
 ```
+
 #### Environment variables:
+
 url_backend = URL of the backend server.
+
 ```
 AMPLIFY_DIFF_DEPLOY=false
 AMPLIFY_DIFF_DEPLOY=csr-react

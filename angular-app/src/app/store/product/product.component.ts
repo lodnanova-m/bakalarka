@@ -13,7 +13,10 @@ import { environment } from '../../../environments/environment';
   styleUrl: './product.component.scss',
 })
 export class ProductComponent {
-  constructor(private apiService: ApiService, private route: ActivatedRoute) {}
+  constructor(
+    private apiService: ApiService,
+    private route: ActivatedRoute,
+  ) {}
   environment: any = environment;
   product?: IProduct;
   ngOnInit() {

@@ -14,6 +14,7 @@ Ensure you have the following installed on your system:
 To get a local copy up and running, follow these simple steps.
 
 ### Install the dependencies:
+
 ```sh
 npm install
 ```
@@ -42,7 +43,9 @@ Builds the app for production to the `dist` folder.\
 It correctly bundles Svelte in production mode and optimizes the build for the best performance.
 
 ### Deployment
+
 #### Build settings for AWS Amplify:
+
 ```yml
 version: 1
 applications:
@@ -59,15 +62,17 @@ applications:
       artifacts:
         baseDirectory: .amplify-hosting
         files:
-          - '**/*'
+          - "**/*"
       cache:
         paths:
           - .npm/**/*
     appRoot: svelte-app
-
 ```
+
 #### Environment variables:
+
 url_backend = URL of the backend server.
+
 ```
 _CUSTOM_IMAGE=public.ecr.aws/docker/library/node:18.19.0
 URL=url_backend

@@ -14,6 +14,7 @@ Ensure you have the following installed on your system:
 To get a local copy up and running, follow these simple steps.
 
 ### Install the dependencies:
+
 ```sh
 npm install
 ```
@@ -53,7 +54,9 @@ npm run lint
 Runs the linter on the project files.
 
 ### Deployment
+
 #### Build settings for AWS Amplify:
+
 ```yml
 version: 1
 applications:
@@ -69,16 +72,18 @@ applications:
       artifacts:
         baseDirectory: .next
         files:
-          - '**/*'
+          - "**/*"
       cache:
         paths:
           - .next/cache/**/*
           - node_modules/**/*
     appRoot: next_js_app
-
 ```
+
 #### Environment variables:
+
 url_backend = URL of the backend server.
+
 ```
 AMPLIFY_DIFF_DEPLOY=false
 AMPLIFY_DIFF_DEPLOY=next_js_app

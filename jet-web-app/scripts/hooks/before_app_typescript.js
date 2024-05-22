@@ -4,7 +4,7 @@
   as shown at https://oss.oracle.com/licenses/upl/
 
 */
-'use strict';
+"use strict";
 
 module.exports = function (configObj) {
   return new Promise((resolve) => {

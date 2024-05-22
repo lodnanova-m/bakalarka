@@ -4,11 +4,11 @@
   as shown at https://oss.oracle.com/licenses/upl/
 
 */
-'use strict';
+"use strict";
 
 module.exports = function () {
   return new Promise((resolve) => {
-    console.log('Running after_app_create hook.');
+    console.log("Running after_app_create hook.");
     resolve();
   });
 };

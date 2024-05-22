@@ -49,12 +49,12 @@ class RootViewModel {
     this.message = ko.observable();
 
     let globalBodyElement: HTMLElement = document.getElementById(
-      "globalBody"
+      "globalBody",
     ) as HTMLElement;
     globalBodyElement.addEventListener(
       "announce",
       this.announcementHandler,
-      false
+      false,
     );
 
     // media queries for responsive layouts
@@ -171,7 +171,7 @@ class RootViewModel {
   openedChangedHandler = (event: CustomEvent): void => {
     if (event.detail.value === false) {
       const drawerToggleButtonElement = document.querySelector(
-        "#drawerToggleButton"
+        "#drawerToggleButton",
       ) as HTMLElement;
       drawerToggleButtonElement.focus();
     }

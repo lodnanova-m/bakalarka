@@ -1,23 +1,22 @@
-.about
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    margin: 5rem;
-    height: 80vh;
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 5rem;
+  height: 80vh;
 }
-.card{
-    background-color: var(--bgSoft);
-    padding: 2rem 3rem ;
-    border-radius: 1rem;
-    max-width: 50%;
+.card {
+  background-color: var(--bgSoft);
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  max-width: 50%;
 }
 @media (max-width: 60rem) {
-    .container {
-      flex-direction: column;
-    }
-    .card{
-        max-width: 100%;
-    }
+  .container {
+    flex-direction: column;
   }
+  .card {
+    max-width: 100%;
+  }
+}

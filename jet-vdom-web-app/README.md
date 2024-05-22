@@ -15,10 +15,10 @@ Ensure the following software is installed on your system:
 To set up and run this project locally, follow these instructions.
 
 ### Install the dependencies:
+
 ```sh
 npm install
 ```
-
 
 ### Available Scripts
 
@@ -27,9 +27,9 @@ In the project directory, you can run:
 ```sh
 ojet serve
 ```
+
 Launches the application in development mode.
 Open [http://localhost:8000](http://localhost:8000) to view it in your browser.
-
 
 The page will reload if you make edits.
 You will also see any lint errors in the console.
@@ -42,7 +42,9 @@ Compiles the application for production to the `web` folder.
 It optimizes the Oracle JET application for best performance in production mode.
 
 ### Deployment
+
 #### Build settings for AWS Amplify:
+
 ```yml
 version: 1
 applications:
@@ -57,14 +59,15 @@ applications:
       artifacts:
         baseDirectory: web
         files:
-          - '**/*'
+          - "**/*"
       cache:
         paths:
           - .npm/**/*
     appRoot: jet-vdom-web-app
-
 ```
+
 #### Environment variables:
+
 ```
 AMPLIFY_MONOREPO_APP_ROOT=jet-vdom-web-app
 AMPLIFY_DIFF_DEPLOY=false

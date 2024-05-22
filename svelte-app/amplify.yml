@@ -12,7 +12,7 @@ frontend:
   artifacts:
     baseDirectory: .amplify-hosting
     files:
-      - '**/*'
+      - "**/*"
   cache:
     paths:
       - node_modules/**/*

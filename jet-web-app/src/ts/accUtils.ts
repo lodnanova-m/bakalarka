@@ -29,12 +29,14 @@ export function announce(message: string, manner?: string): void {
 
   let params: {
     bubbles: boolean;
-    detail: { message: string, manner: string };
+    detail: { message: string; manner: string };
   } = {
-    "bubbles": true,
-    "detail": { "message": message, "manner": manner }
+    bubbles: true,
+    detail: { message: message, manner: manner },
   };
 
-  let globalBodyElement: HTMLElement = document.getElementById("globalBody") as HTMLElement;
+  let globalBodyElement: HTMLElement = document.getElementById(
+    "globalBody",
+  ) as HTMLElement;
   globalBodyElement.dispatchEvent(new CustomEvent("announce", params));
 }

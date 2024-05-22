@@ -1,32 +1,32 @@
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--bgSoft);
-    width: 100%;
-    padding: 0.3rem 4rem;
-    margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bgSoft);
+  width: 100%;
+  padding: 0.3rem 4rem;
+  margin-top: 2rem;
 }
 .initials {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
 .logotype {
-    display: block;
-    max-height: 3rem;
-    width: auto;
-    height: auto;
+  display: block;
+  max-height: 3rem;
+  width: auto;
+  height: auto;
 }
 
 @media (max-width: 55rem) {
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-    .initials {
-        display: none;
-    }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .initials {
+    display: none;
+  }
 }

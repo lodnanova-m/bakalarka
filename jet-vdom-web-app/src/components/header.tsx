@@ -23,14 +23,14 @@ type Route = {
 
 export const Header = (props: Props) => {
   const [selectedPage, setSelectedPage] = useState<string>(
-    props.page ? props.page : "bindings"
+    props.page ? props.page : "bindings",
   );
   const mediaQueryRef = useRef<MediaQueryList>(
-    window.matchMedia(ResponsiveUtils.getFrameworkQuery("sm-only")!)
+    window.matchMedia(ResponsiveUtils.getFrameworkQuery("sm-only")!),
   );
 
   const [isSmallWidth, setIsSmallWidth] = useState(
-    mediaQueryRef.current.matches
+    mediaQueryRef.current.matches,
   );
 
   useEffect(() => {
@@ -38,7 +38,7 @@ export const Header = (props: Props) => {
     return () =>
       mediaQueryRef.current.removeEventListener(
         "change",
-        handleMediaQueryChange
+        handleMediaQueryChange,
       );
   }, [mediaQueryRef]);
 
@@ -55,7 +55,7 @@ export const Header = (props: Props) => {
   });
 
   const pageChangeHandler = (
-    event: ojNavigationList.selectionChanged<Route["path"], Route>
+    event: ojNavigationList.selectionChanged<Route["path"], Route>,
   ) => {
     if (event.detail.updatedFrom === "internal")
       props.onPageChanged(event.detail.value);

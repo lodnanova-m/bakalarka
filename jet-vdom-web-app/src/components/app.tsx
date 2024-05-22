@@ -46,7 +46,7 @@ export const router = new CoreRouter<CoreRouter.DetailedRouteConfig>(
   routeArray,
   {
     urlAdapter: new UrlParamAdapter(),
-  }
+  },
 );
 
 const pageChangeHandler = (value: string) => {
@@ -66,7 +66,7 @@ export const App = registerCustomElement("app-root", (props: Props) => {
   }, []);
 
   const routerUpdated = (
-    actionable: CoreRouter.ActionableState<CoreRouter.DetailedRouteConfig>
+    actionable: CoreRouter.ActionableState<CoreRouter.DetailedRouteConfig>,
   ): void => {
     // Update our state based on new router state
     const newPath = actionable.state?.path;

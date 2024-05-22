@@ -11,7 +11,7 @@ root.render(
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 
 console.log(process.env.REACT_APP_URL);

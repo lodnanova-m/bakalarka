@@ -5,9 +5,9 @@
 
 */
 module.exports = function (configObj) {
-    return new Promise((resolve) => {
-      console.log('Running after_component_package hook.');
-      // const componentName = configObj.component.
-      resolve(configObj);
-    });
-  };
+  return new Promise((resolve) => {
+    console.log("Running after_component_package hook.");
+    // const componentName = configObj.component.
+    resolve(configObj);
+  });
+};

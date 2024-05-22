@@ -5,18 +5,19 @@ import { IOptions, IProduct } from '../../types';
 import { environment } from '../../environments/environment.development';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiService {
-
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
   getAllProducts(): Observable<IProduct[]> {
-    return this.httpClient.get<{ items: IProduct[] }>(`${environment.apiUrl}/products`).pipe(
-      map(response => response.items)
-    );
+    return this.httpClient
+      .get<{ items: IProduct[] }>(`${environment.apiUrl}/products`)
+      .pipe(map((response) => response.items));
   }
-  getProductById(id: number): Observable<{item: IProduct}> {
-    return this.httpClient.get<{item: IProduct}>(`${environment.apiUrl}/products/${id}`).pipe(map(response => response));
+  getProductById(id: number): Observable<{ item: IProduct }> {
+    return this.httpClient
+      .get<{ item: IProduct }>(`${environment.apiUrl}/products/${id}`)
+      .pipe(map((response) => response));
   }
 }
