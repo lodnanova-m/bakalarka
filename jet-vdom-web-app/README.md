@@ -1,6 +1,6 @@
 # Oracle JET Virtual DOM Application
 
-This project is developed as a demonstration of the Virtual DOM architecture in Oracle JET, as outlined in the official [Oracle JET documentation](https://docs.oracle.com/en/middleware/developer-tools/jet/14/vdom/get-started-virtual-dom-architecture-oracle-jet.html#GUID-6AEB5A00-22D8-4BC1-AAB3-4134F906C1C0). It's part of a larger exploration into efficient rendering techniques in modern web applications.
+This project is developed as a demonstration of the Virtual DOM architecture in Oracle JET, as outlined in the official [Oracle JET documentation](https://docs.oracle.com/en/middleware/developer-tools/jet/14/vdom/get-started-virtual-dom-architecture-oracle-jet.html#GUID-6AEB5A00-22D8-4BC1-AAB3-4134F906C1C0).
 
 ## Prerequisites
 
@@ -65,7 +65,6 @@ applications:
 
 ```
 #### Environment variables:
-url_backend = URL of the backend server.
 ```
 AMPLIFY_MONOREPO_APP_ROOT=jet-vdom-web-app
 AMPLIFY_DIFF_DEPLOY=false
